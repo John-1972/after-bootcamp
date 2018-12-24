@@ -1,0 +1,22 @@
+<h1>This is the job opportunities page.</h1> <!-- Text to identify this page -->
+
+<h4>Remote/International Jobs</h4>
+<% @skill_links.each do |link| %>
+  <a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a>
+  <br />
+<% end %>
+
+<h4>Job Opportunities in the United States</h4>
+<% @wage_links.each do |link| %>
+  <a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a>
+  <br />
+<% end %>
+
+<h4>Job Opportunities in the United Kingdom</h4>
+<% @jobsearch_links.each do |link| %>
+  <a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a>
+  <br />
+<% end %>
+
+<br />
+<%= link_to 'Index Page', root_path %>
