@@ -15,5 +15,10 @@ class LinksController < ApplicationController
 
   def job_ops
     @international_links = Link.where(section: :int_job_ops) # All 'int_job_ops' links in DB --> ONE inst var
+    @american_links = Link.where(section: :us_job_ops)
+    @british_links = Link.where(section: :uk_job_ops)
+    @canadian_links = Link.where(section: :can_job_ops)
+    @australian_links = Link.where(section: :aus_job_ops)
+    @new_zealand_links = Link.where(section: :nz_job_ops)
   end
 end
