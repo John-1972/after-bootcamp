@@ -10,13 +10,13 @@
 
   <body class="background-col">
     <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-title" href="index.html">After-Bootcamp</a>
+      <%= link_to 'After-Bootcamp', root_path, class: 'navbar-title' %>
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link" href="job-links.html">Job Links</a>
+          <%= link_to 'Job Advice', advice_path, class: 'nav-link' %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="coding-projects.html">Coding Projects</a>
+          <%= link_to 'Job Opportunities', job_ops_path, class: 'nav-link' %>
         </li>
       </ul>
     </nav>
