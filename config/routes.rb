@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   get 'advice', to: 'links#advice'
   get 'job_ops', to: 'links#job_ops'
   get 'courses', to: 'links#courses'
+
+  get 'projects/index'
+  get 'projects/planets'
 end
