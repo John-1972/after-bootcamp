@@ -21,4 +21,14 @@ class LinksController < ApplicationController
     @australian_links = Link.where(section: :aus_job_ops)
     @new_zealand_links = Link.where(section: :nz_job_ops)
   end
+
+  def courses
+    @options_links = Link.where(section: :options_overview) # All 'options_overview' links --> ONE inst var
+    @crypto_links = Link.where(section: :crypto_currency)
+    @cybersec_links = Link.where(section: :cyber_security)
+    @datasci_links = Link.where(section: :data_science)
+    @machine_links = Link.where(section: :machine_learning)
+    @mobile_links = Link.where(section: :mobile_apps)
+    @ux_ui_links = Link.where(section: :ux_ui)
+  end
 end
