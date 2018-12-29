@@ -1,19 +1,110 @@
-<h1>This is the job advice page.</h1> <!-- Text to identify this page -->
+<div class="container"> <!-- Title and sub-title -->
+  <div class="titlebox col-md">
+    <h1>Job-Search Advice</h1>
+    <h3>This is an evolving list of useful resources to assist bootcamp graduates with their job hunt.</h3>
+  </div>
+</div>
 
-<h4>Skills In Demand</h4>
-<% @skill_links.each do |link| %>
-  <a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a>
-  <br />
-<% end %>
+<div class="container">
+  <div class="textbox col-md">
+    <b>Skills In Demand</b> <!-- Section heading -->
+  </div>
+  <ul>
+    <div class="item col-md"> <!-- Links as bullet points -->
+      <% @skill_links.each do |link| %>
+        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
+      <% end %>
+    </div>
+  </ul>
+</div>
 
-<h4>Web Dev Pay Rates</h4>
-<% @wage_links.each do |link| %>
-  <a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a>
-  <br />
-<% end %>
+<div class="container">
+  <div class="textbox col-md">
+    <b>Web Developer Pay Rates</b> <!-- Section heading -->
+  </div>
+  <ul>
+    <div class="item col-md"> <!-- Links as bullet points -->
+      <% @wage_links.each do |link| %>
+        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
+      <% end %>
+    </div>
+  </ul>
+</div>
 
-<h4>Advice on Finding a Job</h4>
-<% @jobsearch_links.each do |link| %>
-  <a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a>
-  <br />
-<% end %>
+<div class="container">
+  <div class="textbox col-md">
+    <b>Advice on Finding a Job</b> <!-- Section heading -->
+  </div>
+  <ul>
+    <div class="item col-md"> <!-- Links as bullet points -->
+      <% @jobsearch_links.each do |link| %>
+        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
+      <% end %>
+    </div>
+  </ul>
+</div>
+
+<div class="container">
+  <div class="textbox col-md">
+    <b>Improving Your Resumé and Portfolio</b> <!-- Section heading -->
+  </div>
+  <ul>
+    <div class="item col-md"> <!-- Links as bullet points -->
+      <% @resume_links.each do |link| %>
+        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
+      <% end %>
+    </div>
+  </ul>
+</div>
+
+<div class="container">
+  <div class="textbox col-md">
+    <b>Preparing for Interviews</b> <!-- Section heading -->
+  </div>
+  <ul>
+    <div class="item col-md"> <!-- Links as bullet points -->
+      <% @interview_links.each do |link| %>
+        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
+      <% end %>
+    </div>
+  </ul>
+</div>
+
+<div class="container">
+  <div class="textbox col-md">
+    <b>Data Structures, Algorithms & Big-O Notation</b> <!-- Section heading -->
+  </div>
+  <ul>
+    <div class="item col-md"> <!-- Links as bullet points -->
+      <% @data_algo_links.each do |link| %>
+        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
+      <% end %>
+    </div>
+  </ul>
+</div>
+
+<div class="container">
+  <div class="textbox col-md">
+    <b>Example Interview Questions</b> <!-- Section heading -->
+  </div>
+  <ul>
+    <div class="item col-md"> <!-- Links as bullet points -->
+      <% @question_links.each do |link| %>
+        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
+      <% end %>
+    </div>
+  </ul>
+</div>
+
+<div class="container">
+  <div class="textbox col-md">
+    <b>Helpful YouTube Channels</b> <!-- Section heading -->
+  </div>
+  <ul>
+    <div class="item col-md"> <!-- Links as bullet points -->
+      <% @youtube_links.each do |link| %>
+        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
+      <% end %>
+    </div>
+  </ul>
+</div>
