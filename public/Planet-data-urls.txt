@@ -1,0 +1,23 @@
+Planet, Distance from Sun (millions of km), Eq. Diameter (km), Orbital period (Earth time)
+==========================================================================================
+Mercury, 57.9 mil km, 4879.4 km, 88 days
+Venus, 108.2 mil km, 12103.6 km, 225 days
+Earth, 149.6 mil km, 12756.2 km, 365 days
+Mars, 227.9 mil km, 6792.4 km, 687 days
+Jupiter, 778.6 mil km, 142984 km, 11.9 years
+Saturn, 1433.5 mil km, 120536 km, 29.5 years
+Uranus, 3008 mil km, 51118 km, 84.0 years
+Neptune, 4500 mil km, 49528 km, 164.8 years
+
+
+URLs for 480x480 pixel images (Mercury first, Neptune last)
+===========================================================
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Mercury_in_color_-_Prockter07_centered.jpg/484px-Mercury_in_color_-_Prockter07_centered.jpg
+https://upload.wikimedia.org/wikipedia/commons/e/e5/Venus-real_color.jpg
+https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/480px-The_Earth_seen_from_Apollo_17.jpg
+https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/OSIRIS_Mars_true_color.jpg/480px-OSIRIS_Mars_true_color.jpg
+https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Jupiter.jpg/480px-Jupiter.jpg
+https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Saturn-cassini-March-27-2004.jpg/640px-Saturn-cassini-March-27-2004.jpg
+https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Uranus.jpg/480px-Uranus.jpg
+https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neptune_Full.jpg/480px-Neptune_Full.jpg
