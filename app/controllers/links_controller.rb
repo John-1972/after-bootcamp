@@ -3,9 +3,9 @@ class LinksController < ApplicationController
   end
 
   def advice
-    @skill_links = Link.where(section: :skills) # All 'skill' entries from DB --> ONE instance variable
-    @wage_links = Link.where(section: :pay_rates) # All 'pay_rates' entries in DB --> ONE instance variable
-    @jobsearch_links = Link.where(section: :jobsearch_advice) # All 'jobsearch_advice' DB entries --> ONE var
+    @skill_links = Link.where(section: :skills) # ALL 'skill' links from DB --> ONE instance variable
+    @wage_links = Link.where(section: :pay_rates)
+    @jobsearch_links = Link.where(section: :jobsearch_advice)
     @resume_links = Link.where(section: :resume)
     @portfolio_links = Link.where(section: :portfolio)
     @interview_links = Link.where(section: :interview_prep)

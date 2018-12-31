@@ -1,19 +1,86 @@
-<h1>This is the job opportunities page.</h1> <!-- Text to identify this page -->
+<div class="container"> <!-- Title and sub-title -->
+  <div class="titlebox col-md">
+    <h1>Job Opportunities</h1>
+    <h3>This is a list of the most popular job recruitment websites.</h3>
+    <h3>In addition to these, you can also find job vacancies for a particular technology by typing its name into LinkedIn’s search box.</h3>
+    <h3>Networking is a good way to hear about job openings, which you can do at your language’s local user group or by helping out on group coding projects.</h3>
+  </div>
+</div>
 
-<h4>Remote/International Jobs</h4>
-<% @international_links.each do |link| %>
-  <a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a>
-  <br />
-<% end %>
+<div class="container">
+  <div class="textbox col-md">
+    <b>Remote/International Jobs</b> <!-- Section heading -->
+  </div>
+  <ul>
+    <div class="item col-md"> <!-- Links as bullet points -->
+      <% @international_links.each do |link| %>
+        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
+      <% end %>
+    </div>
+  </ul>
+</div>
 
-<h4>Job Opportunities in the United States</h4>
-<% @american_links.each do |link| %>
-  <a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a>
-  <br />
-<% end %>
+<div class="container">
+  <div class="textbox col-md">
+    <b>Job Opportunities in the United States</b> <!-- Section heading -->
+  </div>
+  <ul>
+    <div class="item col-md"> <!-- Links as bullet points -->
+      <% @american_links.each do |link| %>
+        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
+      <% end %>
+    </div>
+  </ul>
+</div>
 
-<h4>Job Opportunities in the United Kingdom</h4>
-<% @british_links.each do |link| %>
-  <a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a>
-  <br />
-<% end %>
+<div class="container">
+  <div class="textbox col-md">
+    <b>Job Opportunities in the United Kingdom</b> <!-- Section heading -->
+  </div>
+  <ul>
+    <div class="item col-md"> <!-- Links as bullet points -->
+      <% @british_links.each do |link| %>
+        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
+      <% end %>
+    </div>
+  </ul>
+</div>
+
+<div class="container">
+  <div class="textbox col-md">
+    <b>Job Opportunities in Canada</b> <!-- Section heading -->
+  </div>
+  <ul>
+    <div class="item col-md"> <!-- Links as bullet points -->
+      <% @canadian_links.each do |link| %>
+        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
+      <% end %>
+    </div>
+  </ul>
+</div>
+
+<div class="container">
+  <div class="textbox col-md">
+    <b>Job Opportunities in Australia</b> <!-- Section heading -->
+  </div>
+  <ul>
+    <div class="item col-md"> <!-- Links as bullet points -->
+      <% @australian_links.each do |link| %>
+        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
+      <% end %>
+    </div>
+  </ul>
+</div>
+
+<div class="container">
+  <div class="textbox col-md">
+    <b>Job Opportunities in New Zealand</b> <!-- Section heading -->
+  </div>
+  <ul>
+    <div class="item col-md"> <!-- Links as bullet points -->
+      <% @new_zealand_links.each do |link| %>
+        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
+      <% end %>
+    </div>
+  </ul>
+</div>

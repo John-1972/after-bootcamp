@@ -122,10 +122,10 @@
             <pre>
               <code class="language-ruby"> <!-- Following code shifted left to fit on browser page -->
       link_to_if @not_first_planet, '< Previous planet',  planet_path(@planet.id - 1)
-      # Previous planet link enabled if current planet isn’t first
+      # "Previous planet" link enabled if current planet isn’t the first
 
       link_to_if @not_last_planet, 'Next planet >',   planet_path(@planet.id + 1)
-      # Next planet link enabled if current planet isn’t last</code>
+      # "Next planet" link enabled if current planet isn’t the last</code>
             </pre>
           </li>
         </div>
