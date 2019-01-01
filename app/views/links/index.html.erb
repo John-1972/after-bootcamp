@@ -1,9 +1,31 @@
-<h1>This is the index page.</h1> <!-- Test text to ID the page when it's displayed -->
+    <div class="container">
+      <div class="titlebox col-md">
+        <h1>After-Bootcamp</h1>
+        <h3>Useful resources for code bootcamp graduates</h3>
+        <img src="<%= image_url('yellow_rocket.png') %>" height="180" width="180" />
+      </div>
+    </div>
 
-<%= link_to 'Link to Coding Projects page', projects_index_path %>
-<br />
-<%= link_to 'Link to Job Advice page', advice_path %>
-<br />
-<%= link_to 'Link to Job Opportunities page', job_ops_path %>
-<br />
-<%= link_to 'Link to Advanced Courses page', courses_path %>
+    <div class="container">
+      <div class="textbox col-md">
+        <b><%= link_to 'Coding Projects:', projects_index_path %></b> Test your newly-gained skills by taking on these app-building exercises.
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="textbox col-md">
+        <b><%= link_to 'Job-Search Advice:', advice_path %></b> Useful resources to assist bootcamp graduates with their job hunt.
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="textbox col-md">
+        <b><%= link_to 'Job Opportunities:', job_ops_path %></b> A list of the most popular recruitment websites.
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="textbox col-md">
+        <b><%= link_to 'Advanced Courses:', courses_path %></b> Specialist options for bootcamp graduates.
+      </div>
+    </div>
