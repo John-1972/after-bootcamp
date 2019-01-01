@@ -21,13 +21,13 @@
 
 body {background-color: blue;}
 
-.navbar-title { /* Class applied to 'After-Bootcamp' title at LH end of nav-bar */
+.navbar-title { /* Class applied to 'After-Bootcamp' title at left-hand end of nav-bar */
   font-family: 'Patua One', cursive;
   font-size: 30px;
   color: white;
 }
 
-.nav-link { /* Class applied to four nav-links at RH end of nav-bar */
+.nav-link { /* Class applied to four nav-links at right-hand end of nav-bar */
   font-family: 'Catamaran', sans-serif;
   font-size: 22px;
   color: #F4CB22;
@@ -64,7 +64,7 @@ body {background-color: blue;}
   margin-bottom: 10px;
 }
 
-.textbox { /* This defines the boxes that make-up the section headings */
+.homepage-box { /* 4 navigation boxes in the body of the index page */
   margin-top: 14px;
   border-radius: 20px;
   padding: 8px;
@@ -77,12 +77,25 @@ body {background-color: blue;}
   margin-bottom: 10px;
 }
 
-.textbox b { /* This is the text that appears in all section heading boxes (apart from on the index page) */
+.homepage-box b a { /* This is the bold text that's in the 4 navigation boxes in the body of the index page */
   font-family: 'Catamaran', sans-serif;
   font-weight: 600;
   font-size: 26px;
   color: white;
   padding-left: 10px;
+}
+
+.section-heading { /* The boxes that make-up the section headings on link list pages & project detail pages */
+  margin-top: 14px;
+  border-radius: 20px;
+  padding: 8px;
+  background-color: #444444;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 600;
+  font-size: 26px;
+  color: white;
+  margin-bottom: 10px;
+  padding-left: 20px;
 }
 
 .item { /* Non-bold bullet point text (Used on project page for quickly describing project links) */
