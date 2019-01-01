@@ -21,42 +21,34 @@
 
 body {background-color: blue;}
 
-.navbar-title {
+.navbar-title { /* Class applied to 'After-Bootcamp' title at LH end of nav-bar */
   font-family: 'Patua One', cursive;
   font-size: 30px;
   color: white;
 }
 
-.nav-link {
+.nav-link { /* Class applied to four nav-links at RH end of nav-bar */
   font-family: 'Catamaran', sans-serif;
   font-size: 22px;
   color: #F4CB22;
 }
 
-.background-col {
+.background-col { /* Class applied to 'body' tag on all pages */
   background-color: #202020;
 }
 
-h1 {
-  color: white;
-}
-
-h4 {
-  color: white;
-}
-
-.titlebox {
+.titlebox { /* titlebox contains the title and sub-title at the top of every page */
   text-align: center;
   padding: 20px;
 }
 
-.titlebox h1 {
+.titlebox h1 { /* This applies to the page title at the top of every page */
   font-family: 'Patua One', cursive;
   font-size: 56px;
   color: white;
 }
 
-.titlebox h3 {
+.titlebox h3 { /* This applies to the one-line subtitle beneath the title on every page */
   font-family: 'Catamaran', sans-serif;
   font-size: 30px;
   color: white;
@@ -64,12 +56,20 @@ h4 {
   margin-bottom: 14px;
 }
 
-.textbox {
+.body-text { /* This is for paragraph text that might appear beneath the subtitle to explain the page */
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.textbox { /* This defines the boxes that make-up the section headings */
   margin-top: 14px;
   border-radius: 20px;
   padding: 8px;
   background-color: #444444;
-  /* Attributes for regular text */
+  /* Attributes for when regular text appears in those boxes (Only seen on the index page) */
   font-family: 'Catamaran', sans-serif;
   font-weight: 400;
   font-size: 26px;
@@ -77,7 +77,7 @@ h4 {
   margin-bottom: 10px;
 }
 
-.textbox b {
+.textbox b { /* This is the text that appears in all section heading boxes (apart from on the index page) */
   font-family: 'Catamaran', sans-serif;
   font-weight: 600;
   font-size: 26px;
@@ -85,23 +85,7 @@ h4 {
   padding-left: 10px;
 }
 
-.body-text {
-  font-family: 'Catamaran', sans-serif;
-  font-weight: 400;
-  font-size: 22px;
-  color: white;
-  margin-bottom: 10px;
-}
-
-.section-heading {
-  margin-top: 20px;
-  font-family: 'Patua One', cursive;
-  font-size: 30px;
-  color: white;
-  text-decoration: underline;
-}
-
-.item {
+.item { /* Non-bold bullet point text (Used on project page for quickly describing project links) */
   font-family: 'Catamaran', sans-serif;
   font-weight: 400;
   font-size: 22px;
@@ -109,7 +93,7 @@ h4 {
   margin-top: 6px;
 }
 
-.item b {
+.item b { /* Bold text style used on all 'link' bullet points (Should prob swap places with ^prev style) */
   font-family: 'Catamaran', sans-serif;
   font-weight: 600;
   font-size: 24px;
@@ -117,11 +101,11 @@ h4 {
   margin-top: 6px;
 }
 
-.item li pre {
+.item li pre { /* Is this something to do with Prism-formatted code snippets? */
   padding: 0;
 }
 
-.footer-text {
+.footer-text { /* Footer text to show author */
   font-family: 'Catamaran', sans-serif;
   font-weight: 400;
   font-size: 18px;
