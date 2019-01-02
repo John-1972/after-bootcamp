@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="titlebox col-md">
+  <div class="titlebox col-md"> <!-- Title and sub-title -->
     <h1>Coding Projects</h1>
     <h3>Projects that give bootcamp graduates the opportunity to roll-up their sleeves and test their skills.</h3>
   </div>
@@ -26,10 +26,10 @@
     Front-end Projects <!-- Section heading -->
   </div>
   <ul>
-    <div class="item col-md">
+    <div class="bullet-point col-md">
       <li><b>Coming soon...</b></li>
     </div>
-    <!-- <div class="item col-md">
+    <!-- <div class="bullet-point col-md">
       <li><b>Name of Project.</b> Short description goes here.</li>
     </div> -->
   </ul>
@@ -40,7 +40,7 @@
     Full-stack Projects <!-- Section heading -->
   </div>
   <ul>
-    <div class="item col-md">
+    <div class="bullet-point col-md">
       <li><b><%= link_to 'Planets of the Solar System.', projects_planets_path %></b> Image slideshow, small database, 1 controller, 1 model, simple CSS.</li>
     </div>
   </ul>
@@ -51,10 +51,10 @@
     Single Page Applications <!-- Section heading -->
   </div>
   <ul>
-    <div class="item col-md">
+    <div class="bullet-point col-md">
       <li><b>Coming soon...</b></li>
     </div>
-    <!-- <div class="item col-md">
+    <!-- <div class="bullet-point col-md">
       <li><b>Name of Project.</b> Short description goes here.</li>
     </div> -->
   </ul>
@@ -65,7 +65,7 @@
     Other Code Challenge Websites <!-- Section heading -->
   </div>
   <ul>
-    <div class="item col-md"> <!-- Links as bullet points -->
+    <div class="bullet-point col-md"> <!-- Links as bullet points -->
       <% @coding_site_links.each do |link| %>
         <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
       <% end %>
