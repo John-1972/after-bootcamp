@@ -65,24 +65,26 @@ body {background-color: blue;}
 }
 
 .homepage-box { /* 4 navigation boxes in the body of the index page */
-  margin-top: 14px;
   border-radius: 20px;
-  padding: 8px;
   background-color: #444444;
-  /* Attributes for when regular text appears in those boxes (Only seen on the index page) */
-  font-family: 'Catamaran', sans-serif;
-  font-weight: 400;
-  font-size: 26px;
-  color: white;
+  margin-top: 14px;
   margin-bottom: 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 8px;
 }
 
-.homepage-box b a { /* This is the bold text in the 4 nav boxes in the body of the index page */
-  font-family: 'Catamaran', sans-serif;
-  font-weight: 600;
-  font-size: 26px;
+.homepage-box a { /* This is the title (link) text in the 4 nav boxes in the body of the index page */
+  font-family: 'Patua One', cursive;
+  font-size: 32px;
   color: white;
-  padding-left: 10px;
+}
+
+.homepage-box p { /* Attributes for regular text in the homepage nav boxes */
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: white;
 }
 
 .section-heading { /* The boxes that make-up the section headings on link list pages & project detail pages */

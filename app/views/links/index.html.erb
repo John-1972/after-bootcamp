@@ -7,25 +7,29 @@
     </div>
 
     <div class="container">
-      <div class="homepage-box col-md">
-        <b><%= link_to 'Coding Projects:', projects_index_path %></b> Test your newly-gained skills by taking on these app-building exercises.
+      <div class="row">
+        <div class="col-lg-1"></div> <!-- Insert a blank column to get everything centered -->
+        <div class="homepage-box col-lg-5 text-center">
+          <%= link_to 'Coding Projects', projects_index_path %>
+          <p>Test your newly-gained skills by taking on these app-building exercises.</p>
+        </div>
+        <div class="homepage-box col-lg-5 text-center">
+          <%= link_to 'Job-Search Advice', advice_path %>
+          <p>Useful resources to assist bootcamp graduates with their job hunt.</p>
+        </div>
       </div>
     </div>
 
     <div class="container">
-      <div class="homepage-box col-md">
-        <b><%= link_to 'Job-Search Advice:', advice_path %></b> Useful resources to assist bootcamp graduates with their job hunt.
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="homepage-box col-md">
-        <b><%= link_to 'Job Opportunities:', job_ops_path %></b> A list of the most popular recruitment websites.
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="homepage-box col-md">
-        <b><%= link_to 'Advanced Courses:', courses_path %></b> Specialist options for bootcamp graduates.
+      <div class="row">
+        <div class="col-lg-1"></div> <!-- Insert a blank column to get everything centered -->
+        <div class="homepage-box col-lg-5 text-center">
+          <%= link_to 'Job Opportunities', job_ops_path %>
+          <p>A list of the most popular recruitment websites.</p>
+        </div>
+        <div class="homepage-box col-lg-5 text-center">
+          <%= link_to 'Advanced Courses', courses_path %>
+          <p>Specialist options for bootcamp graduates.</p>
+        </div>
       </div>
     </div>
