@@ -15,80 +15,19 @@
   <br />
 </div>
 
-<div class="container">
-  <div class="section-heading col-md">
-    Remote/International Jobs <!-- Section heading -->
-  </div>
-  <ul>
-    <div class="bullet-point col-md"> <!-- Links as bullet points -->
-      <% @international_links.each do |link| %>
-        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
-      <% end %>
+<!-- Section headings are stored in the 'Heading' database table. -->
+<!-- The headings needed for this page have 'id' numbers from 11 to 16 -->
+<% for this_heading in 11..16 %>
+  <div class="container">
+    <div class="section-heading col-md"> <!-- Section headings have their own CSS style -->
+      <%= @headings.find(this_heading).heading_text %> <!-- Show section heading text for a particular id num -->
     </div>
-  </ul>
-</div>
-
-<div class="container">
-  <div class="section-heading col-md">
-    Job Opportunities in the United States <!-- Section heading -->
+    <ul>
+      <div class="bullet-point col-md"> <!-- Show links as bullet points -->
+        <% @links.where(heading_id: this_heading).each do |link| %> <!-- All links for this heading_id -->
+          <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
+        <% end %>
+      </div>
+    </ul>
   </div>
-  <ul>
-    <div class="bullet-point col-md"> <!-- Links as bullet points -->
-      <% @american_links.each do |link| %>
-        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
-      <% end %>
-    </div>
-  </ul>
-</div>
-
-<div class="container">
-  <div class="section-heading col-md">
-    Job Opportunities in the United Kingdom <!-- Section heading -->
-  </div>
-  <ul>
-    <div class="bullet-point col-md"> <!-- Links as bullet points -->
-      <% @british_links.each do |link| %>
-        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
-      <% end %>
-    </div>
-  </ul>
-</div>
-
-<div class="container">
-  <div class="section-heading col-md">
-    Job Opportunities in Canada <!-- Section heading -->
-  </div>
-  <ul>
-    <div class="bullet-point col-md"> <!-- Links as bullet points -->
-      <% @canadian_links.each do |link| %>
-        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
-      <% end %>
-    </div>
-  </ul>
-</div>
-
-<div class="container">
-  <div class="section-heading col-md">
-    Job Opportunities in Australia <!-- Section heading -->
-  </div>
-  <ul>
-    <div class="bullet-point col-md"> <!-- Links as bullet points -->
-      <% @australian_links.each do |link| %>
-        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
-      <% end %>
-    </div>
-  </ul>
-</div>
-
-<div class="container">
-  <div class="section-heading col-md">
-    Job Opportunities in New Zealand <!-- Section heading -->
-  </div>
-  <ul>
-    <div class="bullet-point col-md"> <!-- Links as bullet points -->
-      <% @new_zealand_links.each do |link| %>
-        <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
-      <% end %>
-    </div>
-  </ul>
-</div>
+<% end %>
