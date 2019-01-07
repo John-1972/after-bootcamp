@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
 
     # The title of the section containing the code challenge websites is stored in the 'Heading' table in
     # the column called 'heading_text' with an 'id' of 1.
-    @challenge_site_heading = Heading.where(id: this_heading)
+    @challenge_site_heading = Heading.find(this_heading)
     
     # The links for that section are stored in the 'Link' table, and have a matching value in the
     # 'heading_id' column.

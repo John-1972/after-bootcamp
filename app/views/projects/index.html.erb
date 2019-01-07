@@ -61,12 +61,12 @@
 </div>
 
 <div class="container">
-  <div class="section-heading col-md">
-    <%= @challenge_site_heading.first.heading_text %> <!-- Section heading -->
+  <div class="section-heading col-md"> <!-- Section headings have their own CSS style -->
+    <%= @challenge_site_heading.heading_text %> <!-- Show section heading text for this heading -->
   </div>
   <ul>
     <div class="bullet-point col-md"> <!-- Links as bullet points -->
-      <% @challenge_site_links.each do |link| %>
+      <% @challenge_site_links.each do |link| %> <!-- All links for this heading_id -->
         <li><b><a target="_blank" rel="noopener noreferrer" href='<%= link.URL %>'><%= link.title %></a></b></li>
       <% end %>
     </div>
