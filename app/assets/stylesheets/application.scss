@@ -67,11 +67,8 @@ body {background-color: blue;}
 .homepage-box { /* 4 navigation boxes in the body of the index page */
   border-radius: 20px;
   background-color: #444444;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  margin-left: 4px;
-  margin-right: 4px;
-  padding: 8px;
+  padding-top: 10px;
+  margin: 4px; /* Applies to all four sides */
 }
 
 .homepage-box a { /* This is the title (link) text in the 4 nav boxes in the body of the index page */
