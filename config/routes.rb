@@ -7,4 +7,5 @@ Rails.application.routes.draw do
 
   get 'projects/index'
   get 'projects/planets'
+  get 'projects/prefab'
 end

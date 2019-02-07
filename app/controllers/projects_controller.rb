@@ -17,4 +17,7 @@ class ProjectsController < ApplicationController
 
   def planets
   end
+
+  def prefab
+  end
 end

@@ -1,0 +1,160 @@
+    <div class="container">
+      <div class="titlebox col-md">
+        <h1>Project: Prefabricated Home Manufacturers</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="section-heading col-md">
+        Broad Description
+      </div>
+      <div class="intro-text col-md">
+        ‘Prefab’ will be a directory-style page of web links, listing manufacturers of prefabricated homes. Visitors won’t be able to add their own links, but a single site administrator will. The site admin will gain access through a login page and then add links using a form. The app will consist of a single page with a nav bar, a photo, a number of headings and a few links beneath each heading:
+      </div>
+      <div class="titlebox col-md"> <!-- Using titlebox to centre the wireframe image -->
+        <img src="<%= image_url('prefab-wireframe.png') %>" width="600" height="450"/>
+      </div>
+      <div class="intro-text col-md">
+        Your finished site might look something like this: <a target="_blank" rel="noopener noreferrer" href="https://prefab-after-bootcamp.herokuapp.com">https://prefab-after-bootcamp.herokuapp.com</a>
+      </div>
+      <div class="intro-text col-md">
+        Once the administrator has logged in, the page to add a new link could look like this: [Link to screen grab] <a target="_blank" rel="noopener noreferrer" href="https://prefab-after-bootcamp.herokuapp.com">https://prefab-after-bootcamp.herokuapp.com</a>
+      </div>
+      <br />
+    </div> 
+
+    <div class="container">
+      <div class="section-heading col-md">
+        Thinking like a web developer
+      </div>
+      <ul>
+        <div class="bullet-point col-md">
+          <li>This web app will display four or five headings, which will each sit above four or five web-links. So the app’s database will need two tables; one to contain the headings and one for the web-links.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>Two tables will require two models; a heading model and a link model (This doesn’t include the user model that a user authentication library/package would create).</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>If your web stack will allow any controller to request data from the heading model, then a specific headings controller may not be required.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>However, as links will certainly be added from within the site, a links controller (with CRUD functionality) will be needed.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>To begin with, the app will only require one view: the link listing on the index page. But this will have to be expanded when user authentication and ‘create a new link’ functionality is added.</li>
+        </div>        
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="section-heading col-md">
+        Helpful hints for building this app (without giving too much away)
+      </div>
+      <ul>
+        <div class="bullet-point col-md">
+          <li>The home page of this app will display some headings with a few links beneath each one. You could write code that pulls each of these items from the database individually, but that would involve a lot of repetition, and coders don’t like that. It would be much better to create a loop that pulls out both the headings AND their associated links with each pass.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>How does someone do that? You’ll need to ensure that a heading and its links share a single identifier which connects the two.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>Each entry in the headings table will contain the text for that heading, the text for its subtitle and an ID, which is automatically added.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>Each entry in the links table will contain the text description to be displayed for that link, the URL that the user will be taken to when they click the description and an ID which, again, is automatically added.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>Now, if each link in the table is also given a ‘heading_id’ field to hold the ID of the heading under which it should appear, then when your code loops through each of the headings (and their IDs), it will be able to recognise the links that go with that heading, thanks to a matching ‘heading_id’.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>We know that the headings database table will contain a fixed number of items (The site admin will be adding links, but not extra headings). This means that it only needs to be populated with data once, during the building of the site, and this can be done manually using the command line.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>However, to add links to the database, the app will require a ‘New Link’ form page. The app will need to know which of the headings your new link should appear under, so this page will have to fetch all available headings and allow the user to choose one. Installing a form-creation library can help with this.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>The appearance of your app will be improved by adding a navigation bar to the top of the screen and neatly formatting the text with margins and fonts. Installing a CSS framework can help with this.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>A text file containing details of prefabricated home manufacturers in the United States and the United Kingdom can be downloaded from here. [link] <%= link_to 'here', '/Planet-data-urls.txt', :target => "_blank" %>.</li>
+        </div>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="section-heading col-md">
+        More detailed help (with Ruby on Rails code snippets)
+      </div>
+      <ul>
+        <div class="bullet-point col-md">
+          <li>As the app only needs an index action and a show action, you can disable all other resources by modifying the ‘resources’ line in the routes.rb file:
+            <pre>
+              <code class="language-ruby">
+                root ‘planets#index’ 
+                resources :planets, only: %i[show]</code>
+            </pre>
+          ‘rake routes’ will now only display two actions for the planets controller.
+          </li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>To immediately redirect users from the index page to the first show page, the index action in the Planets controller (app/controllers/planets_controller) might say something like:
+            <pre>
+              <code class="language-ruby">
+                redirect_to planet_path(1)</code>
+            </pre>
+          (It is possible to set routes.rb to say “root ‘planets#show’”, which would set the show page as root and skip the index page entirely. But you can’t include an id with the ‘root’ action, so there would be no way to specify a planet on the show page.)
+          </li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>By default, Rails sets the URL of a displayed record by its id. For example, the ‘something’ database record with an id of 1 will appear in the browser address bar as ‘something/1’.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>Your app will need to work out what the previous and next planet is from the one that’s currently shown. The links in your app/views/layouts/application.html.erb file can do this using simple arithmetic:
+            <pre>
+              <code class="language-ruby">
+                planet_path(@planet.id – 1)
+
+                planet_path(@planet.id + 1)</code>
+            </pre>
+          </li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>To disable the previous/next links when the app is showing the first and last planets, the ‘show’ action in the Planets controller will need to set some boolean variables when the first or last planets are being displayed:
+            <pre>
+              <code class="language-ruby">
+                if @planet.id != 1
+                  @not_first_planet = true
+                end
+
+                if @planet.id != 8 
+                  @not_last_planet = true
+                end</code>
+            </pre>
+          These booleans can then be tested to decide whether to enable the links in app/views/layouts/application.html.erb:
+            <pre>
+              <code class="language-ruby"> <!-- Following code shifted left to fit on browser page -->
+      link_to_if @not_first_planet, '< Previous planet',  planet_path(@planet.id - 1)
+      # "Previous planet" link enabled if current planet isn’t the first
+
+      link_to_if @not_last_planet, 'Next planet >',   planet_path(@planet.id + 1)
+      # "Next planet" link enabled if current planet isn’t the last</code>
+            </pre>
+          </li>
+        </div>
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="section-heading col-md">
+        “I’m not really interested in planets. What else could this project be about?”
+      </div>
+      <ul>
+        <div class="bullet-point col-md">
+          <li>Ancient cities</li>
+          <li>Dog breeds</li>
+          <li>Classic guitars</li>
+          <li>Retro cellphones</li>
+          <li>Famous athletes</li>
+        </div>     
+      </ul>
+    </div>
