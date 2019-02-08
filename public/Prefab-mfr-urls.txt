@@ -1,0 +1,67 @@
+Content for US version of Prefabricated Home Manufacturers web app
+==================================================================
+
+Types of Prefabricated Homes
+----------------------------
+- Modular Building, Wikipedia - https://en.wikipedia.org/wiki/Modular_building
+- Kit Houses, Wikipedia - https://en.wikipedia.org/wiki/Kit_house
+- Log Houses, Wikipedia - https://en.wikipedia.org/wiki/Log_house
+
+Modular Home Manufacturers
+--------------------------
+- Ideabox - https://www.ideabox.us/
+- Sustain Design - http://sustain.ca/
+- Zip Kit Homes - https://www.zipkithomes.com/
+- Reclaimed Space - https://www.reclaimedspace.com/
+- Modular Home Builders Association - http://www.modularhousing.com/
+
+Small Kit Home Manufacturers
+----------------------------
+- Shelter Kit - https://www.shelterkit.com/
+- Bungalow in a Box - http://www.bungalowinabox.com/index.html
+- Endeavor Homes - http://www.endeavorhomes.com/
+- Gold Country Kit Homes - https://goldcountrykithomes.com/
+- Cabin Kit Homes - http://www.cabinkit.com/cabin1.htm
+- Assembly Required: 15 DIY Kit Homes - https://www.bobvila.com/slideshow/assembly-required-15-diy-kit-homes-44417#efficient-kit-house
+
+Log Home Manufacturers
+----------------------
+- Southwest Log Homes - http://southwestloghomes.com/
+- Homestead Log Homes - https://www.homesteadloghomes.com/
+- Western Cabin Kits - http://www.westerncabinkits.com/
+- International Log Builders Association - http://www.logassociation.org/directory/builders_us.php
+
+
+Content for UK version of Prefabricated Home Manufacturers web app
+==================================================================
+
+Articles About Prefabricated Homes
+----------------------------------
+- Timber Frame Guide - https://www.homebuilding.co.uk/timber-frame-guide/)
+- How to Choose a Timber Frame System - https://www.homebuilding.co.uk/how-to-choose-a-timber-frame-system/
+- How to Choose a SIP System - https://www.homebuilding.co.uk/how-to-choose-a-sips-system/
+- Flatpack Homes and Kit Houses - http://www.buildyourownhouseuk.co.uk/flat-pack-homes-and-kit-houses/
+- How Much Does it Really Cost to Build a Flatpack Home? - https://job-prices.co.uk/flat-pack-homes/
+
+Manufacturers of Open- & Closed-Panel Homes
+-------------------------------------------
+- Potton - https://www.potton.co.uk/ <https://www.potton.co.uk/inspiration>
+- Scandia-Hus - https://www.scandia-hus.co.uk/
+- The Timber Frame Company - http://www.ttfcuk.co.uk/
+- Scotframe - http://www.scotframe.co.uk/
+
+Manufacturers of Structural Insulated Panel (SIP) Homes
+-------------------------------------------------------
+- Hebridean Homes - https://www.hebrideanhomes.com/
+- Fjord Hus - http://www.fjordhus.com/
+- Huf Haus - https://www.huf-haus.com/en-uk/
+- Hanse Haus - http://www.hanse-haus.co.uk/
+- Dan-Wood Houses - https://www.dan-wood.co.uk/
+
+Manufacturers of Log-Built Homes
+--------------------------------
+- British Log Cabins - http://britishlogcabins.com/
+- Mountain Lodge Homes - https://mountainlodgehomes.co.uk/properties/
+- Finnish Log Homes - http://www.finnishloghomes.co.uk/
+- Keops Interlock - https://logcabins.co.uk/
+- House-UK - http://www.house-uk.co.uk/

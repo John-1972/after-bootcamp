@@ -18,7 +18,7 @@
         Your finished site might look something like this: <a target="_blank" rel="noopener noreferrer" href="https://prefab-after-bootcamp.herokuapp.com">https://prefab-after-bootcamp.herokuapp.com</a>
       </div>
       <div class="intro-text col-md">
-        Once the administrator has logged in, the page to add a new link could look like this: [Link to screen grab] <a target="_blank" rel="noopener noreferrer" href="https://prefab-after-bootcamp.herokuapp.com">https://prefab-after-bootcamp.herokuapp.com</a>
+        Once the administrator has logged in, the page to add a new link could look like <a target="_blank" rel="noopener noreferrer" href="<%= image_url('prefab-form-screen.png') %>">this.</a>
       </div>
       <br />
     </div> 
@@ -76,7 +76,7 @@
           <li>The appearance of your app will be improved by adding a navigation bar to the top of the screen and neatly formatting the text with margins and fonts. Installing a CSS framework can help with this.</li>
         </div>
         <div class="bullet-point col-md">
-          <li>A text file containing details of prefabricated home manufacturers in the United States and the United Kingdom can be downloaded from here. [link] <%= link_to 'here', '/Planet-data-urls.txt', :target => "_blank" %>.</li>
+          <li>A text file containing details of prefabricated home manufacturers in the United States and the United Kingdom can be downloaded from <%= link_to 'here', '/Prefab-mfr-urls.txt', :target => "_blank" %>.</li>
         </div>
       </ul>
     </div>
@@ -87,57 +87,81 @@
       </div>
       <ul>
         <div class="bullet-point col-md">
-          <li>As the app only needs an index action and a show action, you can disable all other resources by modifying the ‘resources’ line in the routes.rb file:
+          <li>Once the heading and link models have been generated, you can associate them in the heading model:
             <pre>
               <code class="language-ruby">
-                root ‘planets#index’ 
-                resources :planets, only: %i[show]</code>
+                has_many :links</code>
             </pre>
-          ‘rake routes’ will now only display two actions for the planets controller.
-          </li>
-        </div>
-        <div class="bullet-point col-md">
-          <li>To immediately redirect users from the index page to the first show page, the index action in the Planets controller (app/controllers/planets_controller) might say something like:
+          ...and in the link model:
             <pre>
               <code class="language-ruby">
-                redirect_to planet_path(1)</code>
-            </pre>
-          (It is possible to set routes.rb to say “root ‘planets#show’”, which would set the show page as root and skip the index page entirely. But you can’t include an id with the ‘root’ action, so there would be no way to specify a planet on the show page.)
-          </li>
-        </div>
-        <div class="bullet-point col-md">
-          <li>By default, Rails sets the URL of a displayed record by its id. For example, the ‘something’ database record with an id of 1 will appear in the browser address bar as ‘something/1’.</li>
-        </div>
-        <div class="bullet-point col-md">
-          <li>Your app will need to work out what the previous and next planet is from the one that’s currently shown. The links in your app/views/layouts/application.html.erb file can do this using simple arithmetic:
-            <pre>
-              <code class="language-ruby">
-                planet_path(@planet.id – 1)
-
-                planet_path(@planet.id + 1)</code>
+                belongs_to :heading</code>
             </pre>
           </li>
         </div>
         <div class="bullet-point col-md">
-          <li>To disable the previous/next links when the app is showing the first and last planets, the ‘show’ action in the Planets controller will need to set some boolean variables when the first or last planets are being displayed:
+          <li>Homepage requests can be directed to an ‘index’ action in the links controller...
             <pre>
               <code class="language-ruby">
-                if @planet.id != 1
-                  @not_first_planet = true
-                end
-
-                if @planet.id != 8 
-                  @not_last_planet = true
+                root ‘links#index’</code>
+            </pre>
+          </li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>Even though the ‘index’ action is in the links controller, it can request data from the heading model and put them into instance variables...
+            <pre>
+              <code class="language-ruby">
+                def index 
+                  @headings = Heading.all 
+                  @links = Link.all 
                 end</code>
             </pre>
-          These booleans can then be tested to decide whether to enable the links in app/views/layouts/application.html.erb:
+          </li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>The code in the homepage’s view file (index.html.erb) which not only loops through the headings, but also finds the links that are attached to each heading and then renders them both, could look something like this:
+            <div class="titlebox col-md"> <!-- Using titlebox to centre the image -->
+              <img src="<%= image_url('prefab-loop-code.png') %>" width="776" height="336"/>
+            </div>
+          Variable.find(param) gives a single result, whereas Variable.where(param) gives a <em>number</em> of results.
+          </li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>Installing the Bootstrap ruby gem makes it easier to nicely format the text and create a nav bar at the top of the page.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>After assigning more actions to the links controller in routes.rb (resources :links), a ‘new’ action and a ‘create’ action can be added to the controller. With the ‘simple_form’ ruby gem installed, a ‘new’ view (new.html.erb) to match the ‘new’ action can be created:
+            <div class="titlebox col-md"> <!-- Using titlebox to centre the image -->
+              <img src="<%= image_url('prefab-form-code.png') %>" width="713" height="231"/>
+            </div>
+          This ‘new link’ page could be accessed from a suitable button on the nav bar.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>User authentication can be added to the app by going through the steps to install the Devise ruby gem and then putting ‘Sign Up’, ‘Sign In’ and ‘Sign Out’ buttons on the nav bar.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>To limit the ‘new’ and ‘create’ actions only to authenticated users, a before-filter should be added to the beginning of the links controller:
             <pre>
-              <code class="language-ruby"> <!-- Following code shifted left to fit on browser page -->
-      link_to_if @not_first_planet, '< Previous planet',  planet_path(@planet.id - 1)
-      # "Previous planet" link enabled if current planet isn’t the first
-
-      link_to_if @not_last_planet, 'Next planet >',   planet_path(@planet.id + 1)
-      # "Next planet" link enabled if current planet isn’t the last</code>
+              <code class="language-ruby">
+                before_action :authenticate_user!, only: [:new, :create]</code>
+            </pre>
+          </li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>As things stand, anyone can create a user account by signing him/herself up with a username and password. But this app is going to display the links that have been added by just one user – a site admin. So you will need to create that one account, and then change the app to prevent anymore sign-ups.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>To begin with, the ‘New Link’, ‘Sign Out’ and ‘Sign In’ buttons on the nav bar can be enclosed in code which only displays them at the appropriate times:
+            <div class="titlebox col-md"> <!-- Using titlebox to centre the image -->
+              <img src="<%= image_url('prefab-signedin-code.png') %>" width="661" height="231"/>
+            </div>
+          You can also go ahead and remove the ‘Sign Up’ button from the nav bar.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>Although the ‘sign up’ link has been removed, somebody might try to access it using the address bar (/sign_up). To stop this from happening, delete the word ‘:registerable’ from the User model and then restart your server. All ‘user_registration’ routes will now disappear from ‘rake routes’. To prevent a 404 error, requests to these routes can be re-directed to the homepage:
+            <pre>
+              <code class="language-ruby">
+                match '*path' => redirect('/'), via: :get</code>
             </pre>
           </li>
         </div>
@@ -146,15 +170,15 @@
 
     <div class="container">
       <div class="section-heading col-md">
-        “I’m not really interested in planets. What else could this project be about?”
+        “I’m not really interested in prefabricated homes. What else could my bookmarks point to?”
       </div>
       <ul>
         <div class="bullet-point col-md">
-          <li>Ancient cities</li>
-          <li>Dog breeds</li>
-          <li>Classic guitars</li>
-          <li>Retro cellphones</li>
-          <li>Famous athletes</li>
+          <li>Interesting museums</li>
+          <li>Entrepreneurship blogs</li>
+          <li>80’s pop groups</li>
+          <li>Electric car companies</li>
+          <li>Spanish soccer teams</li>
         </div>     
       </ul>
     </div>
