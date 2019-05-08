@@ -1,0 +1,64 @@
+    <div class="container">
+      <div class="titlebox col-md">
+        <h1>Project: Library Computer Search Screen</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="section-heading col-md">
+        Broad Description
+      </div>
+      <div class="intro-text col-md">
+        This project will create a simple user interface that allows visitors to search a city library’s catalogue using its computer terminals. All of the library’s computer terminal screens are 1024px wide and 768px high. This means that the search page won’t have to adapt to different screen sizes; it can be a fixed size. The search page will show some user instructions, a search form and a table:
+      </div>
+      <div class="titlebox col-md"> <!-- Using titlebox to centre the wireframe image -->
+        <img src="<%= image_url('search-wireframe.png') %>" width="600" height="450"/>
+      </div>
+      <div class="intro-text col-md">
+        Although this may seem like a very simple exercise, it touches upon a number of areas of fundamental CSS knowledge: boxes/containers, layout (fixed width), text, colour, forms and tables.
+      </div>
+      <br />
+    </div> 
+
+    <div class="container">
+      <div class="section-heading col-md">
+        Thinking like a web developer
+      </div>
+      <ul>
+        <div class="bullet-point col-md">
+          <li>CSS layouts are based on the ‘box’ model. The page can be imagined as 5 boxes, one on top of the other: a title heading, some body text, a small HTML form, some more body text and a HTML table.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>The ‘Search’ button won’t actually perform a search, but the form’s “action” declaration can point to a dummy site at http://www.example.com/form.php.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>The finished page might look something like this: <a target="_blank" rel="noopener noreferrer" href="https://librarysearch-after-bootcamp.herokuapp.com/">https://librarysearch-after-bootcamp.herokuapp.com/</a></li>
+        </div>     
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="section-heading col-md">
+        Helpful hints for building this page (without giving too much away)
+      </div>
+      <ul>
+        <div class="bullet-point col-md">
+          <li>The ‘body’ selector can be assigned a fixed width that’s suitable for the screen size of the library’s terminals, as well as some code that puts it in the centre of the browser window and adds a background colour.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>The title box can be created by enclosing the title text in ‘h1’ tags, and modifying the h1 selector’s font size, border, padding and colours.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>Putting body text into a container will make it easy to format.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>The form will need to be centred on the page, and its elements spaced out using ‘margin’ declarations.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>The list of items displayed in the table will be easier to read if rows have alternate background colours.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>In my example page (linked above), the HTML also includes its CSS. So if you want to see the code that I’ve used, just select the ‘View Source’ option in your web browser.</li>
+        </div>
+      </ul>
+    </div>
