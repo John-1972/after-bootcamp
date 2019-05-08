@@ -1,0 +1,76 @@
+    <div class="container">
+      <div class="titlebox col-md">
+        <h1>Project: Publisher's Book Sample Webpage</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="section-heading col-md">
+        Broad Description
+      </div>
+      <div class="intro-text col-md">
+        This project will create a page on an imaginary publishing company’s website to display a sample chapter from a book. The page will be designed as a ‘liquid layout’, so its columns will squash and stretch as the browser window is resized. It has a simple format with a title bar above some site links, followed by content that’s split between two columns: a column on the left containing book-related links plus a mailing list form, and a column on the right containing the sample chapter...
+      </div>
+      <div class="titlebox col-md"> <!-- Using titlebox to centre the wireframe image -->
+        <img src="<%= image_url('sample-wireframe.png') %>" width="600" height="450"/>
+      </div>
+      <br />
+    </div> 
+
+    <div class="container">
+      <div class="section-heading col-md">
+        Thinking like a web developer
+      </div>
+      <ul>
+        <div class="bullet-point col-md">
+          <li>This is a liquid layout, so dimensions will be expressed as percentages of the page width.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>The first jobs are to decide what percentage of the browser window should be assigned to the page body, and then what percentage of the page body should be assigned to each column -- while leaving space for margins between them.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>The finished page might look something like this: <a target="_blank" rel="noopener noreferrer" href="http://booksample-after-bootcamp.herokuapp.com/">http://booksample-after-bootcamp.herokuapp.com/</a></li>
+        </div>     
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="section-heading col-md">
+        Helpful hints for building this page (without giving too much away)
+      </div>
+      <ul>
+        <div class="bullet-point col-md">
+          <li>The ‘body’ of the page could be assigned 90% of the width of the browser window, to leave 5% margins on either side.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>The site heading will be in its own ‘h1’ box, whose appearance can be altered by attaching styles to the ‘h1’ selector.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>The horizontal, site-wide navbar will be inside its own container, beneath the title heading.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>The left-hand column could take one-quarter of the width of the body, leaving the right-hand column the remaining three-quarters. A tiny amount will have to be deducted from each for margin gaps.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>The book-related links in the left-hand column can be made using an unordered list, although you’ll probably want to hide the bullet points.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>The ‘action’ for your HTML form can be pointed to a dummy address: http://www.example.com/form.php.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>If the text input box is coded with type=“email”, the browser can perform HTML5 validation of the entered address.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>In the title line of the right-hand column, italic text can be separated from non-italic text using the ‘span’ tag.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>Horizontal rules can be shortened by applying a ‘width’ to the ‘hr’ selector.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>Lorem Ipsum text can be generated at this website: https://getlorem.com/</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>If you run into problems, the example site’s source code (linked above) includes both HTML and CSS.</li>
+        </div>
+      </ul>
+    </div>

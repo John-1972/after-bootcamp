@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   get 'courses', to: 'links#courses'
 
   get 'projects/index'
+  get 'projects/libsearch'
+  get 'projects/booksample'
   get 'projects/planets'
   get 'projects/prefab'
-  get 'projects/libsearch'
 end
