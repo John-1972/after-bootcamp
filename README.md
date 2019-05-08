@@ -1,24 +1,11 @@
-# README
+# After-Bootcamp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A database-powered directory of web resources to assist bootcamp graduates with their job hunt. The site also includes MVC project exercises that allow graduates to apply their newly-learned skills.
 
-Things you may want to cover:
+The site can be seen here: http://after-bootcamp-website.herokuapp.com/
 
-* Ruby version
+## Motivation
 
-* System dependencies
+The advice given to everyone who completes a coding bootcamp course is "keep coding". This sounded like very sensible advice, but when I looked for projects to work on that were similar to those that I'd been given on the course, I couldn't find anything. So I decided to create my own, and publish them on the web for anyone else who wanted to try out their newly-learned skills.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To make the site even more useful, I thought it might be handy to include a directory of the useful job-hunt advice that can be found online, a list of recruitment sites and a list of the specialist software options that bootcamp grads can pursue.
