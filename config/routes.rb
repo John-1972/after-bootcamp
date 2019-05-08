@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'projects/index'
   get 'projects/libsearch'
   get 'projects/booksample'
+  get 'projects/raspi'
   get 'projects/planets'
   get 'projects/prefab'
 end

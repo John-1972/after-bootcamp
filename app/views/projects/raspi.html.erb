@@ -1,0 +1,64 @@
+    <div class="container">
+      <div class="titlebox col-md">
+        <h1>Project: Raspberry Pi Comparison Page</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="section-heading col-md">
+        Broad Description
+      </div>
+      <div class="intro-text col-md">
+        This project will create a page that compares the specifications of three versions of the Raspberry Pi single-board computer. The page will simply consist of a title heading above three columns, each of which will feature a Raspberry Pi model. The fixed-width columns will be side-by-side, but will stack on top of each other when the browser window is resized.
+      </div>
+      <div class="titlebox col-md"> <!-- Using titlebox to centre the wireframe image -->
+        <img src="<%= image_url('raspi-wireframe.png') %>" width="600" height="450"/>
+      </div>
+      <br />
+    </div> 
+
+    <div class="container">
+      <div class="section-heading col-md">
+        Thinking like a web developer
+      </div>
+      <ul>
+        <div class="bullet-point col-md">
+          <li>The images used for this project are those hosted on Wikipedia’s Raspberry Pi page. They are available in a number of sizes, but the smallest of these is 320px wide. This dimension will determine the size of the columns.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>However, we wouldn’t want to define the overall width of the page; this has to be flexible for when the browser window is resized. Specifying the width of the columns will be enough.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>The finished page might look something like this: <a target="_blank" rel="noopener noreferrer" href="https://raspi-after-bootcamp.herokuapp.com/">https://raspi-after-bootcamp.herokuapp.com/</a></li>
+        </div>     
+      </ul>
+    </div>
+
+    <div class="container">
+      <div class="section-heading col-md">
+        Helpful hints for building this page (without giving too much away)
+      </div>
+      <ul>
+        <div class="bullet-point col-md">
+          <li>There’s no need to specify a width for the h1 box, the text will align to the left by default.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>The three columns will have the same width, margin size, ‘float’ setting and appearance, and can therefore share a ‘class’ selector.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>The first image URL is: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Raspberry-Pi-Zero-FL.jpg/320px-Raspberry-Pi-Zero-FL.jpg</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>The second image URL is: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Raspberry-Pi-2-Bare-FL.jpg/320px-Raspberry-Pi-2-Bare-FL.jpg</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>The third image URL is: https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Raspberry_Pi_3_B%2B_%2839906369025%29.png/320px-Raspberry_Pi_3_B%2B_%2839906369025%29.png</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>Specification details for the 3 Raspberry Pi versions are shown in the wireframe diagram.</li>
+        </div>
+        <div class="bullet-point col-md">
+          <li>If you run into problems, the example site’s source code (linked above) includes both HTML and CSS.</li>
+        </div>
+      </ul>
+    </div>
