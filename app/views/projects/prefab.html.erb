@@ -143,7 +143,7 @@
           <li>To limit the ‘new’ and ‘create’ actions only to authenticated users, a before-filter should be added to the beginning of the links controller:
             <pre>
               <code class="language-ruby">
-                before_action :authenticate_user!, only: [:new, :create]</code>
+              before_action :authenticate_user!, only: [:new, :create]</code>
             </pre>
           </li>
         </div>
@@ -161,7 +161,7 @@
           <li>Although the ‘sign up’ link has been removed, somebody might try to access it using the address bar (/sign_up). To stop this from happening, delete the word ‘:registerable’ from the User model and then restart your server. All ‘user_registration’ routes will now disappear from ‘rake routes’. To prevent a 404 error, requests to these routes can be re-directed to the homepage:
             <pre>
               <code class="language-ruby">
-                match '*path' => redirect('/'), via: :get</code>
+              match '*path' => redirect('/'), via: :get</code>
             </pre>
           </li>
         </div>
