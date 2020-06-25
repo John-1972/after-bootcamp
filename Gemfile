@@ -55,3 +55,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'popper_js'
 gem 'bootstrap', '~> 4.3.1' # Was ~> 4.1.3
+
+gem 'rack', '~> 2.2', '>= 2.2.3'

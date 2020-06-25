@@ -96,7 +96,7 @@ GEM
     popper_js (1.14.5)
     puma (4.3.5)
       nio4r (~> 2.0)
-    rack (2.2.2)
+    rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.4.3)
@@ -191,6 +191,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   popper_js
   puma (>= 3.12)
+  rack (~> 2.2, >= 2.2.3)
   rails (~> 5.2)
   sass-rails (~> 5.0)
   spring
