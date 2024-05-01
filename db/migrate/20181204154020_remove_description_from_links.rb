@@ -3,3 +3,4 @@ class RemoveDescriptionFromLinks < ActiveRecord::Migration[5.0]
     remove_column :links, :description, :string
   end
 end
+# Links don't need a description; the title (hyperlink text) can describe what it is/where it goes

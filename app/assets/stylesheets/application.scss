@@ -20,7 +20,7 @@
 @import url('https://fonts.googleapis.com/css?family=Patua+One');
 @import url('https://fonts.googleapis.com/css?family=Catamaran:400,600');
 
-body {background-color: blue;}
+body {background-color: blue;} /* What is this? Why is there also '.background-col'? */
 
 .navbar-title { /* Class applied to 'After-Bootcamp' title at left-hand end of nav-bar */
   font-family: 'Patua One', cursive;
@@ -35,7 +35,7 @@ body {background-color: blue;}
 }
 
 .background-col { /* Class applied to 'body' tag on all pages */
-  background-color: #202020;
+  background-color: #202020; /* ...But 'body' also has a bg color? */
 }
 
 .titlebox { /* titlebox contains the title and sub-title at the top of every page */
