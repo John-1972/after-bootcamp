@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
     # All section headings are stored in the 2-column 'Heading' table. One column is 'id' and the other is
     # 'heading_text'.
 
-    # The 'id' for the heading at the bottom of the Projects index page is 1.
+    # The 'id' for the 'Coding Challenge Sites' heading at the bottom of the Projects index page is 1.
     this_heading = 1
 
     # The title of the section containing the code challenge websites is stored in the 'Heading' table in
