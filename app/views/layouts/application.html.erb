@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Application.html.erb is the template for all pages -->
 <html>
   <head>
     <title>After-Bootcamp | Useful Resources for Coding Bootcamp Graduates</title>
@@ -14,7 +14,7 @@
     <!-- script type="text/javascript" src="prism.ruby.js"></script -->
   </head>
 
-  <body class="background-col">
+  <body class="background-col"> <!-- Navbar for all pages -->
     <nav class="navbar navbar-dark bg-dark">
       <%= link_to 'After-Bootcamp', root_path, class: 'navbar-title' %>
       <ul class="nav">
@@ -35,15 +35,15 @@
 
     <br class="clear" />
 
-    <%= yield %>
+    <%= yield %> <!-- An individual page's content is inserted into this template at this point -->
 
     <br class="clear" />
 
-    <div class="container"> 
+    <div class="container"> <!-- Footer for all pages -->
       <div class="footer-text col-md">
         Site created by John R Henderson in Sussex, England.
       </div>
       <br />
-    </div> 
+    </div> <!-- class="container" -->
   </body>
 </html>
