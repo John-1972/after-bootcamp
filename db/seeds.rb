@@ -93,6 +93,7 @@ Link.create(heading_id: '10', title: 'Stefan Mischook', URL: 'https://www.youtub
 Link.create(heading_id: '10', title: 'Colt Steele', URL: 'https://www.youtube.com/@ColtSteeleCode/videos')
 Link.create(heading_id: '10', title: 'Code with Ania Kubów', URL: 'https://www.youtube.com/@AniaKubow/videos')
 Link.create(heading_id: '10', title: 'James Q Quick', URL: 'https://www.youtube.com/@JamesQQuick/videos')
+Link.create(heading_id: '10', title: 'Forrest Knight', URL: 'https://www.youtube.com/@fknight/videos')
 
 Link.create(heading_id: '11', title: 'WellFound: “Start-up job search”', URL: 'https://wellfound.com/')
 Link.create(heading_id: '11', title: 'We Work Remotely', URL: 'https://weworkremotely.com')

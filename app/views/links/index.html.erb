@@ -7,29 +7,31 @@
     </div>
 
     <div class="container">
-      <div class="row">
-        <div class="col-lg-1"></div> <!-- Insert a blank column to get everything centered -->
-        <div class="homepage-box col-lg-5 text-center">
+      <div class="row"> <!-- Top row of boxes -->
+        <div class="col-lg-1"></div> <!-- Insert 1 col on left to centre following boxes -->
+        <div class="homepage-box col-lg-5 text-center"> <!-- 5 columns -->
           <%= link_to 'Coding Projects', projects_index_path %>
           <p>Test your newly-gained skills by taking on these app-building exercises.</p>
         </div>
-        <div class="homepage-box col-lg-5 text-center">
+        <div class="homepage-box col-lg-5 text-center"> <!-- 5 columns -->
           <%= link_to 'Job-Search Advice', advice_path %>
           <p>Useful resources to assist bootcamp graduates with their job hunt.</p>
         </div>
+        <!-- Leaves 1 empty col on the right-hand side (Bootstrap = 12 col layout) -->
       </div>
     </div>
 
     <div class="container">
-      <div class="row">
-        <div class="col-lg-1"></div> <!-- Insert a blank column to get everything centered -->
-        <div class="homepage-box col-lg-5 text-center">
+      <div class="row"> <!-- Bottom row of boxes -->
+        <div class="col-lg-1"></div> <!-- Insert 1 col to centre boxes -->
+        <div class="homepage-box col-lg-5 text-center"> <!-- 5 columns -->
           <%= link_to 'Job Opportunities', job_ops_path %>
           <p>A list of the most popular <br /> recruitment websites.</p>
         </div>
-        <div class="homepage-box col-lg-5 text-center">
+        <div class="homepage-box col-lg-5 text-center"> <!-- 5 columns -->
           <%= link_to 'Advanced Courses', courses_path %>
           <p>Specialist options for <br /> bootcamp graduates.</p>
         </div>
+        <!-- Leaves 1 empty col on the RHS (= 12 columns total) -->
       </div>
     </div>
